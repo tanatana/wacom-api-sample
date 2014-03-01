@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>wacom API test</title>
+
+    <!-- Bootstrap -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+     #canvasWrapper {
+       position: relative;
+       width: 800px;
+       height: 600px;
+       border: 1px #000 solid;
+     }
+     #testCanvas {
+       position: absolute;
+       width: 800px;
+       height: 600px;
+       top: 0;
+       left: 0;
+     }
+     #tmpTestCanvas {
+       position: absolute;
+       width: 800px;
+       height: 600px;
+       top: 0;
+       left: 0;
+     }
+    </style>
+  </head>
+  <body>
+    <h1>wacom API test</h1>
+
+    <div id="canvasWrapper">
+      <canvas width="800" height="600" id="testCanvas"></canvas>
+    </div>
+
+    <!--[if IE]>
+    <object id='wtPlugin' classid='CLSID:092dfa86-5807-5a94-bf3b-5a53ba9e5308'>
+    </object>
+    <![endif]--><!--[if !IE]> <-->
+    <object id="wtPlugin" type="application/x-wacomtabletplugin">
+      <param name="onload" value="pluginLoaded" />
+    </object>
+    <!--> <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/wacomapitest.js"></script>
+  </body>
+</html>
